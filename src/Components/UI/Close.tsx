@@ -48,11 +48,11 @@ const Close = ({ position, setIsShow }: IClose) => {
   return (
     <ul
       ref={menuRef}
-      className="absolute w-fit px-7 py-2 text-black z-10 bg-[#fff] rounded-md "
+      className="absolute w-fit text-white z-10 p-2 bg-[#1c1c1c] rounded-md "
       style={{ left: position.x, top: position.y }}
     >
       <li
-        className="cursor-pointer"
+        className="cursor-pointer px-7 py-2 rounded-md transition hover:bg-zinc-500"
         onClick={(e) => {
           handleRemove();
           e.stopPropagation();
@@ -60,7 +60,10 @@ const Close = ({ position, setIsShow }: IClose) => {
       >
         Close
       </li>
-      <li className="cursor-pointer" onClick={handleRemoveAll}>
+      <li
+        className="cursor-pointer px-7 py-2 transition rounded-md hover:bg-zinc-500"
+        onClick={handleRemoveAll}
+      >
         Close All
       </li>
     </ul>
